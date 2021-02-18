@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    ext {
+        androidApplicationId = 'com.cleanarch.sample.presentation'
+        androidVersionCode = 1
+        androidVersionName = "1.0"
+
+        // Android
+        androidBuildToolsVersion = "27.0.1"
+        androidMinSdkVersion = 15
+        androidTargetSdkVersion = 26
+        androidCompileSdkVersion = 26
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+}

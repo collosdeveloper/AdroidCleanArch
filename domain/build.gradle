@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = 1.7
+//noinspection GroovyUnusedAssignment
+targetCompatibility = 1.7
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main {
+        compileClasspath += configurations.provided
+    }
+}
+
+dependencies {
+    compileOnly "javax.annotation:jsr250-api:1.0"
+
+    implementation "javax.inject:javax.inject:1"
+    implementation "io.reactivex.rxjava2:rxjava:2.0.2"
+    compile "com.fernandocejas:arrow:1.0.0"
+}
